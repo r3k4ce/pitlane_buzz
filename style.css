@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER STYLING */
+.header {
+    background-color: #323521;
+    padding: 20px 300px;
+}
+
+.header h1,
+.header p {
+    color: #eeff82;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+}
+
+.header p {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* ARTICLES STYLING */
+.articles {
+    background-color: #090909;
+    padding: 20px 300px;
+}
+
+.article-author,
+.article-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.article-group {
+    margin: 10px;
+}
+
