@@ -25,10 +25,60 @@
     margin-top: 5px;
 }
 
+/* BODY STYLING */
+.main_flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: #323521;
+}
+
+.main_flex > * {
+    flex: 1;
+}
+
+/* TABLE STYLING */
+.driver_table,
+.car_table {
+    text-align: center;
+    width: 150px;
+    min-width: 200px;
+    background-color: #323521;
+    font-weight: 600;
+    color: #eeff82;
+}
+
+.driver_table p,
+.car_table p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table {
+    /* border-collapse: collapse; */
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #090909;
+}
+
+tr:nth-child(odd) {
+    background-color: #323521;
+    color: #eeff82;
+}
+
 /* ARTICLES STYLING */
 .articles {
     background-color: #090909;
-    padding: 20px 300px;
+    padding: 20px 50px;
+    flex-grow: 2.5;
+    border-radius: 30px;
 }
 
 .article-author,
