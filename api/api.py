@@ -1,5 +1,6 @@
 # Import necessary libraries
 from app import get_news
+from app import get_driver_standings
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,3 +21,8 @@ app.add_middleware(
 @app.get("/news")
 def news():
     return get_news()
+
+# Define a route for getting driver standings
+@app.get("/driver_standings")
+def driver_standings():
+    return get_driver_standings()
