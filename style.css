@@ -39,8 +39,9 @@
 /* TABLE STYLING */
 .driver_table,
 .car_table {
+    display: inline-block;
     text-align: center;
-    width: 150px;
+    width: auto;
     min-width: 200px;
     background-color: #323521;
     font-weight: 600;

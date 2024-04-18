@@ -1,4 +1,40 @@
-// Fetch the data from the API
+// Fetch driver standings data from the API
+fetch('http://localhost:8000/driver_standings')
+    .then(response => response.json())
+    .then(data => {
+        // Get the standings table
+        const standingsTable = document.querySelector('.driver_table table');
+
+        // Loop over each driver in the data
+        for (const driver of data) {
+            // Create a new table row
+            const row = document.createElement('tr');
+
+            // Create new table data cells for the position, driver name, team, and points
+            const position = document.createElement('td');
+            position.textContent = driver.Position;
+
+            const driverName = document.createElement('td');
+            driverName.textContent = driver.Driver;
+
+            const team = document.createElement('td');
+            team.textContent = driver.Team;
+
+            const points = document.createElement('td');
+            points.textContent = driver.Points;
+
+            // Append the new cells to the row
+            row.appendChild(position);
+            row.appendChild(driverName);
+            row.appendChild(team);
+            row.appendChild(points);
+
+            // Append the row to the standings table
+            standingsTable.appendChild(row);
+        }
+    });
+
+// Fetch news data from the API
 fetch('http://localhost:8000/news')
     .then(response => response.json())
     .then(data => {
